@@ -1,0 +1,17 @@
+.imag *{
+}
+
+.imag  img{
+    position: relative;
+    width: 10%;
+    box-sizing: content-box;
+    float: left;
+}
+
+.info {
+    float: left;
+}
+
+.info *{
+    margin: 5px
+}
