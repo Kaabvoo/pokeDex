@@ -1,4 +1,9 @@
-<div background="">
+<div>
+  <div class="header">
+    <img src="http://www.geocities.ws/mipokedex/images/logo_pokedex.gif" alt="Broke/No Image">
+    <input id="inPkm" [value]="" (input)=updat($event)>
+    <label for="inPkm">Search Pokemon</label>
+  </div>
   <div class="imag">
     <img src="{{repo?.sprites.front_default}}" alt="Broke/No Image">
     <div class="info">
@@ -10,7 +15,6 @@
         </ul>
     </div>
   </div>
-  <input type="number" value="1" (click)="clic()">
-  <button ng-click="clic">Search</button>
+  
 </div>
 

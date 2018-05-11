@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { GetPokeService } from '../services/get-poke.service';
+import { pipe } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +13,12 @@ export class AppComponent {
   repo: any
 
   ngOnInit(){
-    this.serv.getPoke().subscribe(ret => this.repo = ret.json())
+    this.serv.getPoke("1").subscribe(ret => this.repo = ret.json())
   }
 
 
-  clic(){
-    console.log("Hello");
+  updat(val){
+    this.serv.getPoke(val.target.value).subscribe(ret => this.repo = ret.json());
+    console.log(val.target.value);
   }
 }
